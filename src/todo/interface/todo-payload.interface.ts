@@ -1,8 +1,7 @@
 export interface TodoPayload {
-    id?: number
-    title: string
-    description: string
-    createdDate: Date
-    updatedDate: Date
-    userId?: number
+  id?: number;
+  title: string;
+  done: boolean;
+  createdDate: Date;
+  updatedDate: Date;
 }
