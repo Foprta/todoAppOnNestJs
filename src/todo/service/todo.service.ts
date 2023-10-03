@@ -38,18 +38,14 @@ export class TodoService {
       id: todo.id,
       title: todo.title,
       done: todo.done,
-      createdDate: todo.createdDate,
-      updatedDate: todo.updatedDate,
     };
   }
 
-  async deleteTodoById(id: number): Promise<{ message: string }> {
+  async deleteTodoById(id: number): Promise<void> {
     const todo = await this.todoRepository.delete({ id });
 
     if (todo.affected === 0) {
       throw new NotFoundException(`This ${id} is not found`);
     }
-
-    return { message: 'Deleted successfully !' };
   }
 }

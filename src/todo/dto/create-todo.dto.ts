@@ -11,5 +11,5 @@ export class CreateTodoDto {
   @ApiProperty({ required: false, default: false })
   @IsOptional()
   @IsBoolean()
-  done?: boolean;
+  done: boolean;
 }
